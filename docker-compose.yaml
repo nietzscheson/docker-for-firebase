@@ -1,0 +1,16 @@
+version: '3.5'
+
+services:
+  node:
+    build: ./.docker/node
+    volumes:
+      - ./:/app
+      - $PWD/.docker/node/.config:/root/.config
+    expose:
+      - 9229
+      - 9228
+    ports:
+      - 8010:8010
+      - 9229:9229 # -> functions inspect helloWorld, not works
+      - 9228:9228 # -> node --inspect-brk=0.0.0.0:9228
+    command: yarn --cwd functions serve
