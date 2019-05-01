@@ -1,0 +1,5 @@
+/.docker/node/.config
+/functions/firebase-debug.log
+/.firebaserc
+/.firebase
+.DS_Store
