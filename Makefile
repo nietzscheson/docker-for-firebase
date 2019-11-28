@@ -1,11 +1,20 @@
 .PHONY: 
 
+down:
+	docker-compose donw
+volume:
+	docker volume prune -f
+pull:
+	docker-compose pull
+build:
+	docker-compose build
+up:
+	docker-compose up -d
+init: down volume pull build up
 login:
 	docker-compose run --rm node firebase login --no-localhost
 use:
 	docker-compose run --rm node firebase use --add
-up:
-	docker-compose up -d
 ps:
 	docker-compose ps
 deploy:
