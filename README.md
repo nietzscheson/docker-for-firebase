@@ -8,7 +8,7 @@ This is a Docker (with docker-compose) environment for Firebase development.
 1. First, clone this repository:
 
 ```bash
-$ git clone https://github.com/nietzscheson/docker-firebase-example
+$ git clone https://github.com/nietzscheson/docker-for-firebase
 ```
 
 2. Init project
