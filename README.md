@@ -41,5 +41,5 @@ This results in the following running containers:
 > $ docker-compose ps
              Name                         Command             State                                   Ports
 --------------------------------------------------------------------------------------------------------------------------------------------
-firebase-docker-example_node_1   yarn --cwd functions serve   Up      0.0.0.0:8010->8010/tcp, 0.0.0.0:9228->9228/tcp, 0.0.0.0:9229->9229/tcp
+docker-for-firebase_node_1   yarn --cwd functions serve   Up      0.0.0.0:5000->5000/tcp, 0.0.0.0:9228->9228/tcp, 0.0.0.0:9229->9229/tcp
 ```
