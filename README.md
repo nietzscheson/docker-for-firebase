@@ -13,7 +13,7 @@ $ git clone https://github.com/nietzscheson/docker-for-firebase
 
 2. Init project
 ```bash
-$ ./init.sh
+$ make init
 ```
 
 3. Login in Firebase:
@@ -26,12 +26,7 @@ $ make login
 $ make use
 ```
 
-5. Create Docker containers:
-```bash
-$ make up
-```
-
-6. Show containers:
+5. Show containers:
 ```bash
 $ make ps
 ```
