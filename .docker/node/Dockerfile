@@ -1,10 +1,3 @@
-FROM node:8.14.0-alpine
+FROM node:10.10-alpine
 
-RUN apk add --no-cache $PHPIZE_DEPS --update \
-    curl
-
-RUN npm install --global firebase-tools@latest --ignore-engines
-
-RUN mkdir /app
-
-WORKDIR /app
+RUN npm install -g firebase-tools@latest --ignore-engines
