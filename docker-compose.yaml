@@ -10,9 +10,9 @@ services:
       - 9229
       - 9228
     ports:
-      - 5000:5000
+      - 8080:8080
       - 9229:9229 # -> functions inspect helloWorld, not works
       - 9228:9228 # -> node --inspect-brk=0.0.0.0:9228
-    command: yarn --cwd functions serve
+    command: yarn --cwd functions start
     working_dir: /var/www/app
     
