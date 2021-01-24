@@ -12,7 +12,8 @@ dependencies:
 	docker-compose run --rm functions yarn --cwd functions install --ignore-engines
 up:
 	docker-compose up -d
-init: down volume pull build dependencies up
+# init: down volume pull build dependencies up
+init: down volume pull build up
 login:
 	docker-compose run --rm functions firebase login --no-localhost
 use:
