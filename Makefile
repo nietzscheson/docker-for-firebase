@@ -9,17 +9,18 @@ pull:
 build:
 	docker-compose build
 dependencies:
-	docker-compose run --rm node yarn --cwd functions install --ignore-engines
+	docker-compose run --rm functions yarn --cwd functions install --ignore-engines
 up:
 	docker-compose up -d
-init: down volume pull build dependencies up
+# init: down volume pull build dependencies up
+init: down volume pull build up
 login:
-	docker-compose run --rm node firebase login --no-localhost
+	docker-compose run --rm functions firebase login --no-localhost
 use:
-	docker-compose run --rm node firebase use --add
+	docker-compose run --rm functions firebase use --add
 ps:
 	docker-compose ps
 deploy:
-	docker-compose run --rm node firebase deploy
+	docker-compose run --rm functions firebase deploy
 exec:
-	docker-compose exec node sh
+	docker-compose exec functions sh

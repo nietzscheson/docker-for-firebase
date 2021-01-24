@@ -1,11 +1,13 @@
 version: '3.5'
 
 services:
-  node:
-    build: ./.docker/node
+  functions:
+    build: .
+    container_name: functions
     volumes:
-      - ./:/var/www/app
-      - ./.docker/node/.config:/root/.config
+      - ./:/app:rw,cached
+      - /app/functions/node_modules
+      - ./.config:/root/.config
     expose:
       - 9229
       - 9228
@@ -14,5 +16,5 @@ services:
       - 9229:9229 # -> functions inspect helloWorld, not works
       - 9228:9228 # -> node --inspect-brk=0.0.0.0:9228
     command: yarn --cwd functions start
-    working_dir: /var/www/app
+    working_dir: /app
     
